@@ -13,6 +13,7 @@ public class Main {
     static WebDriver driver;
 
     HomePage homePage;
+    Footer footer;
 
     @BeforeSuite
     public void beforeSuite() {
