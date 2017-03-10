@@ -13,13 +13,13 @@ public class Main {
     static WebDriver driver;
 
     HomePage homePage;
-    Footer footer;
+//    Footer footer;
 
     @BeforeSuite
     public void beforeSuite() {
         driver = new FirefoxDriver();
         driver.get("https://www.globallogic.com/ua/");
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         homePage = PageFactory.initElements(driver, HomePage.class);
     }
 
@@ -27,4 +27,6 @@ public class Main {
     public void afterSuite() {
         driver.close();
     }
+
+
 }
