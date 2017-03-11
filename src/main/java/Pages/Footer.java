@@ -1,13 +1,13 @@
 package Pages;
 
-import javafx.scene.web.WebView;
-import org.omg.CORBA.PUBLIC_MEMBER;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Footer {
@@ -41,22 +41,8 @@ public class Footer {
     private WebElement contactUs;
 
     @FindBy(how = How.XPATH, using = ".//*[@id='Capa_1']")
-    private WebElement globalNavigation;
+    private  WebElement globalNavigation;
 
-    @FindBy(how = How.XPATH, using = ".//*[@href='https://www.globallogic.com']")
-    private WebElement englishSite;
-
-    @FindBy(how = How.XPATH, using = ".//*[@href='https://www.globallogic.com/latam']")
-    private WebElement espanoiolSite;
-
-    @FindBy(how = How.XPATH, using = ".//*[@href='https://www.globallogic.com/ua/']/span")
-    private WebElement uaSite;
-
-    @FindBy(how = How.XPATH, using = ".//*[@href='https://www.globallogic.com/pl/']/span")
-    private WebElement plSite;
-
-    @FindBy(how = How.XPATH, using = ".//*[@href='https://www.globallogic.com/il/']/span")
-    private WebElement israelSite;
 
 
     public void clickWhatDoWeServices() {
@@ -83,32 +69,30 @@ public class Footer {
         contactUs.click();
     }
 
-    public void clickGlobalNavigation() {
+    public  void clickGlobalNavigation() {
         globalNavigation.click();
     }
 
-    public void ckickEnglishSite() {
-        englishSite.click();
-    }
-
-    public void clickEspanoiolSite() {
-        espanoiolSite.click();
-    }
-
-    public void clickUaSite() {
-        uaSite.click();
-    }
-
-    public void clickPlSite() {
-        plSite.click();
-    }
-
-    public void clickIsraelSite() {
-        israelSite.click();
-    }
 
     public void backspace() {
         driver.navigate().back();
 
+    }
+
+    public String forGlobal(String value) {
+        clickGlobalNavigation();
+        WebElement language = driver.findElement(By.xpath(".//*[contains(@class,'nav-country-selector-option')]"));
+        List<WebElement> elementLanguage = language.findElements(By.xpath(".//*[contains(@href,'https://www.globallogic.com/')]/span"));
+        String title = null;
+        for (int i = 0; i < elementLanguage.size(); i++) {
+            clickGlobalNavigation();
+            if (elementLanguage.get(i).getText().equals(value)) {
+                elementLanguage.get(i).click();
+                title = driver.getTitle();
+
+                break;
+            }
+        }
+        return title;
     }
 }
