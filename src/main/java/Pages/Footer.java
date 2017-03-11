@@ -22,7 +22,7 @@ public class Footer {
     }
 
 
-    @FindBy(xpath = ".//*[@id='menu-item-6078']")
+    @FindBy(how = How.XPATH,xpath = ".//*[@id='menu-item-6078']")
     private WebElement whatDoWeServices;
 
     @FindBy(how = How.XPATH, using = ".//*[@id='menu-item-6087']")
