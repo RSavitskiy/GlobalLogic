@@ -1,83 +1,77 @@
 package Pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 
 import static org.testng.Assert.*;
 
-public class TestFooter extends Main {
-//    //    Footer footer = new Footer(driver);
-//    Footer footer;
+public class TestHeader extends Main {
+//    //    Header footer = new Header(driver);
+//    Header footer;
 
 
     @Test(priority = 1)
     public void testWatDoWeServices() {
-        Footer footer = new Footer(driver);
-        footer.clickWhatDoWeServices();
+        Header header = new Header(driver);
+        header.clickWhatDoWeServices();
         assertEquals(homePage.title.getAttribute("innerHTML"), "Що ми робимо - Послуги | GlobalLogic Ukraine");
-        footer.backspace();
+        header.backspace();
     }
 
     @Test(priority = 2)
     public void testOurProjects() throws InterruptedException {
-        Footer footer = new Footer(driver);
+        Header header = new Header(driver);
         Thread.sleep(3000);
 //       driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        footer.clickOurProjects();
+        header.clickOurProjects();
         assertEquals(homePage.title.getAttribute("innerHTML"), "Наші роботи - Приклади | GlobalLogic Ukraine");
-        footer.backspace();
+        header.backspace();
     }
 
     @Test(priority = 2)
     public void testWhoWeAre() throws InterruptedException {
-        Footer footer = new Footer(driver);
+        Header header = new Header(driver);
         Thread.sleep(3000);
 //        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        footer.clickWhoWeAre();
+        header.clickWhoWeAre();
         assertEquals(homePage.title.getAttribute("innerHTML"), "Хто ми - Про нас | GlobalLogic Ukraine");
-        footer.backspace();
+        header.backspace();
     }
 
     @Test(priority = 2)
     public void testNewsAndInsights() throws InterruptedException {
 
-        Footer footer = new Footer(driver);
+        Header header = new Header(driver);
         Thread.sleep(3000);
-        footer.clickNewsAndInsights();
+        header.clickNewsAndInsights();
         assertEquals(homePage.title.getAttribute("innerHTML"), "Новини &amp; Insights | GlobalLogic Ukraine");
-        footer.backspace();
+        header.backspace();
     }
 
     @Test(priority = 2)
     public void testWorkWithUs() throws InterruptedException {
-        Footer footer = new Footer(driver);
+        Header header = new Header(driver);
         Thread.sleep(3000);
-        footer.clickWerkWithUs();
+        header.clickWerkWithUs();
         assertEquals(homePage.title.getAttribute("innerHTML"), "Топ ІТ-компанії України | GlobalLogic Ukraine");
-        footer.backspace();
+        header.backspace();
     }
 
     @Test(priority = 2)
     public void testContactUs() throws InterruptedException {
-        Footer footer = new Footer(driver);
+        Header header = new Header(driver);
         Thread.sleep(3000);
-        footer.clickContactUs();
+        header.clickContactUs();
         assertEquals(homePage.title.getAttribute("innerHTML"), "Зв'язатися з GlobalLogic | GlobalLogic Ukraine");
-        footer.backspace();
+        header.backspace();
     }
 
     @Test(priority = 2, dataProvider = "languageTitle")
     public void testGlobalNavigation(String language, String title) throws InterruptedException {
-        Footer footer = new Footer(driver);
+        Header header = new Header(driver);
         Thread.sleep(3000);
-        assertEquals(footer.forGlobal(language), title);
+        assertEquals(header.forGlobal(language), title);
     }
 
 

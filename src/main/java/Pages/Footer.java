@@ -1,16 +1,15 @@
 package Pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Footer {
+
 
     WebDriver driver;
 
@@ -22,77 +21,20 @@ public class Footer {
     }
 
 
-    @FindBy(how = How.XPATH,xpath = ".//*[@id='menu-item-6078']")
-    private WebElement whatDoWeServices;
+    @FindBy (how = How.XPATH,using = ".//*[contains(@href,'privacy-policy')]")
+    private WebElement privacyPoliticyLinc;
 
-    @FindBy(how = How.XPATH, using = ".//*[@id='menu-item-6087']")
-    private WebElement ourProjects;
+    @FindBy(how = How.XPATH,using = ".//*[contains(@href,'terms-of-services')]")
+    private  WebElement termsOfServices;
 
-    @FindBy(how = How.XPATH, using = ".//*[@id='menu-item-6071']")
-    private WebElement whoWeAre;
+    @FindBy (how = How.XPATH,using = ".//*[contains(@href,'globallogicukraine')]")
+    private WebElement Linkedin;
 
-    @FindBy(how = How.XPATH, using = ".//*[@id='menu-item-6095']")
-    private WebElement newsAndInsights;
+    @FindBy(how = How.XPATH,using = ".//*[contains(@href,'globallogic_ua')]")
+    private WebElement twitter;
 
-    @FindBy(how = How.XPATH, using = ".//*[@id='menu-item-6094']")
-    private WebElement workWithUs;
-
-    @FindBy(how = How.XPATH, using = ".//*[@id='menu-item-6370']")
-    private WebElement contactUs;
-
-    @FindBy(how = How.XPATH, using = ".//*[@id='Capa_1']")
-    private  WebElement globalNavigation;
+    @FindBy(how = How.XPATH,using = ".//*[contains(@href,'GlobalLogicUkraine')]")
+    private WebElement facebook;
 
 
-
-    public void clickWhatDoWeServices() {
-        whatDoWeServices.click();
-    }
-
-    public void clickOurProjects() {
-        ourProjects.click();
-    }
-
-    public void clickWhoWeAre() {
-        whoWeAre.click();
-    }
-
-    public void clickNewsAndInsights() {
-        newsAndInsights.click();
-    }
-
-    public void clickWerkWithUs() {
-        workWithUs.click();
-    }
-
-    public void clickContactUs() {
-        contactUs.click();
-    }
-
-    public  void clickGlobalNavigation() {
-        globalNavigation.click();
-    }
-
-
-    public void backspace() {
-        driver.navigate().back();
-
-    }
-
-    public String forGlobal(String value) {
-        clickGlobalNavigation();
-        WebElement language = driver.findElement(By.xpath(".//*[contains(@class,'nav-country-selector-option')]"));
-        List<WebElement> elementLanguage = language.findElements(By.xpath(".//*[contains(@href,'https://www.globallogic.com/')]/span"));
-        String title = null;
-        for (int i = 0; i < elementLanguage.size(); i++) {
-            clickGlobalNavigation();
-            if (elementLanguage.get(i).getText().equals(value)) {
-                elementLanguage.get(i).click();
-                title = driver.getTitle();
-
-                break;
-            }
-        }
-        return title;
-    }
 }
