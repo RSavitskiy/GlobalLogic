@@ -76,7 +76,6 @@ public class Header {
 
     public void backspace() {
         driver.navigate().back();
-
     }
 
     public String forGlobal(String value) {
