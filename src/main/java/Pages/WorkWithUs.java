@@ -47,6 +47,7 @@ public class WorkWithUs {
 
     private void countJobBlock(){
 
+
     }
 
 
@@ -65,10 +66,7 @@ public class WorkWithUs {
             if (element.equals("Ukraine")) {
                 listCountry.get(i).click();
             }
-
         }
-
-
         WebElement city = driver.findElement(By.xpath(".//*[@name='office']"));
         List<WebElement>listCity=city.findElements(By.tagName("option"));
         System.out.println(listCity.size());
@@ -79,7 +77,6 @@ public class WorkWithUs {
                 listCity.get(i).click();
             }
         }
-
         WebElement position = driver.findElement(By.xpath(".//*[@name='job_category']"));
         List<WebElement>listPosition=position.findElements(By.tagName("option"));
         System.out.println(listPosition.size());
@@ -89,17 +86,15 @@ public class WorkWithUs {
             if(element.equals("Testing & Quality Assurance")){
                 listPosition.get(i).click();
             }
-
         }
-
-
-
-
-
-
-
     }
 
+public void countVacancies(){
+
+    WebElement  vacancies = driver.findElement(By.xpath(".//*[@class='job-block-title']"));
+    List<WebElement>listVacancies=driver.findElements(By.xpath(".//div[@class='job-block-title'][contains(text(),' ')]"));
+    System.out.println(listVacancies.size());
+}
 
 
 }
