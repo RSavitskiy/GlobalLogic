@@ -61,7 +61,7 @@ public class Header {
         newsAndInsights.click();
     }
 
-    public void clickWerkWithUs() {
+    public void clickWorkWithUs() {
         workWithUs.click();
     }
 

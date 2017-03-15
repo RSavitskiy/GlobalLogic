@@ -53,7 +53,7 @@ public class TestHeader extends Main {
     public void testWorkWithUs() throws InterruptedException {
         Header header = new Header(driver);
         Thread.sleep(3000);
-        header.clickWerkWithUs();
+        header.clickWorkWithUs();
         assertEquals(homePage.title.getAttribute("innerHTML"), "Топ ІТ-компанії України | GlobalLogic Ukraine");
         header.backspace();
     }

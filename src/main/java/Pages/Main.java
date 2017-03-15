@@ -26,10 +26,10 @@ public class Main {
 
     }
 
-    @AfterSuite
-    public void afterSuite() {
-        driver.close();
-    }
+//    @AfterSuite
+//    public void afterSuite() {
+//        driver.close();
+//    }
 
 
 

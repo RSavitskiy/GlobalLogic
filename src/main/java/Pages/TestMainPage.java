@@ -126,4 +126,16 @@ public class TestMainPage extends Main {
         mainPage.backspace();
     }
 
+
+//    @Test
+//    public void testShareLinkedin() throws InterruptedException {
+//        mainPage =new MainPage(driver);
+//        mainPage.clickLinkedIn();
+//        Thread.sleep(3000);
+//        assertEquals(mainPage.shareLinkedin(),"Войти в LinkedIn");
+//
+//    }
+
+//    Add share linkedin? twitter and facebook
+
 }

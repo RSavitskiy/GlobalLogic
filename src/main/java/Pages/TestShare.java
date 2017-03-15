@@ -24,29 +24,29 @@ public class TestShare {
         driver = new FirefoxDriver();
     }
 
-//    @Test
-//    public void someTest(){
-//
-//        driver.get("https://www.globallogic.com/ua/");
-//
-//        String originalWinwods =driver.getWindowHandle();
-//        final Set<String>oldWindowsSet=driver.getWindowHandles();
-//        driver.findElement(By.xpath(".//*[@class='essb_item essb_link_twitter nolightbox']")).click();
-//
-//        String newWendows =(new WebDriverWait(driver,10)).until(new ExpectedCondition<String>() {
-//            public String apply(WebDriver webDriver) {
-//                Set<String>newWindowsSet=driver.getWindowHandles();
-//                newWindowsSet.removeAll(oldWindowsSet);
-//                return newWindowsSet.size()>0 ? newWindowsSet.iterator().next():null;
-//            }
-//        });
-//
-//        driver.switchTo().window(newWendows);
-//        System.out.println("New windows title "+driver.getTitle());
-//        driver.close();
-//        driver.switchTo().window(originalWinwods);
-//        System.out.println("old windows title "+driver.getTitle());
-//    }
+    @Test
+    public void someTest(){
+
+        driver.get("https://www.globallogic.com/ua/");
+
+        String originalWinwods =driver.getWindowHandle();
+        final Set<String>oldWindowsSet=driver.getWindowHandles();
+        driver.findElement(By.xpath(".//*[@class='essb_item essb_link_twitter nolightbox']")).click();
+
+        String newWendows =(new WebDriverWait(driver,10)).until(new ExpectedCondition<String>() {
+            public String apply(WebDriver webDriver) {
+                Set<String>newWindowsSet=driver.getWindowHandles();
+                newWindowsSet.removeAll(oldWindowsSet);
+                return newWindowsSet.size()>0 ? newWindowsSet.iterator().next():null;
+            }
+        });
+
+        driver.switchTo().window(newWendows);
+        System.out.println("New windows title "+driver.getTitle());
+        driver.close();
+        driver.switchTo().window(originalWinwods);
+        System.out.println("old windows title "+driver.getTitle());
+    }
 
 
     @Test

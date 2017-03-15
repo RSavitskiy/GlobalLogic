@@ -1,7 +1,6 @@
 package Pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -70,6 +69,8 @@ public class MainPage {
     private WebElement workWithUsButton;
 
 
+//    public static final String shareLinkedin = ".//*[@class='essb_item essb_link_linkedin nolightbox']";
+
     @FindBy(how = How.XPATH, using = ".//*[@class='essb_item essb_link_linkedin nolightbox']")
     private WebElement shareLinkedin;
 
@@ -102,58 +103,57 @@ public class MainPage {
     public boolean isDisplayedLaGalaxyPicture() {
         return laGalaxyPicture.isDisplayed();
     }
+
     public boolean isDisplayedHarmoticPicture() {
         return harmoticPicture.isDisplayed();
     }
+
     public boolean isDisplayedResearchPicuare() {
         return researchPicuare.isDisplayed();
     }
+
     public boolean isDisplayedEconomistPicture() {
         return economistPicture.isDisplayed();
     }
+
     public boolean isDisplayedInstabeatPicture() {
         return instabeatPicture.isDisplayed();
     }
+
     public boolean isDisplayedStellarPicture() {
         return stellarPicture.isDisplayed();
     }
+
     public boolean isDisplayedBayInnovationPicture() {
         return bayInnovationPicture.isDisplayed();
     }
+
     public boolean isDisplayedCochlearPicture() {
         return cochlearPicture.isDisplayed();
     }
+
     public boolean isDisplayedSeeMorePicture() {
         return seeMorePicture.isDisplayed();
     }
+
     public void clickButtonNewsAndInsightsButton() {
         newsAndInsightsButton.click();
     }
-    public void clickButtonWorkWithUsButton(){
+
+    public void clickButtonWorkWithUsButton() {
         workWithUsButton.click();
     }
 
-    public WebElement getShareLinkedin() {
-        return shareLinkedin;
+    public void clickLinkedIn() {
+        shareLinkedin.click();
     }
 
-    public WebElement getSharetwitter() {
-        return sharetwitter;
-    }
 
-    public WebElement getSharefacebook() {
-        return sharefacebook;
-    }
-
-    public WebElement getShareMail() {
-        return shareMail;
-    }
-
-    public String share() {
-//        String originalWindow =driver.getWindowHandle();
+    public String shareLinkedin() {
+        String originalWindow =driver.getWindowHandle();
         final Set<String> oldWindowsSet = driver.getWindowHandles();
-        driver.findElement(By.xpath(".//*[@class='essb_item essb_link_twitter nolightbox']")).click();
-
+//        driver.findElement(By.xpath(".//*[@class='essb_item essb_link_linkedin nolightbox']")).click();
+        driver.findElement(By.xpath(".//*[@class='essb_item essb_link_linkedin nolightbox']")).click();
         String newWindows = (new WebDriverWait(driver, 10)).until(new ExpectedCondition<String>() {
             public String apply(WebDriver webDriver) {
                 Set<String> newWindowsSet = driver.getWindowHandles();
@@ -163,30 +163,27 @@ public class MainPage {
         });
         driver.switchTo().window(newWindows);
 //        System.out.println("New windows title "+driver.getTitle());
-//        driver.close();
-//        driver.switchTo().window(originalWindow);
+        driver.close();
+        driver.switchTo().window(originalWindow);
 //        System.out.println("old windows title "+driver.getTitle());
         return driver.getTitle();
     }
 
 
-
-
-//    public boolean testPicture() {
+    //    public boolean testPicture() {
 //        WebElement goodImage = driver.findElement(By.xpath(".//div[@class='grid-item-image'][contains(@style,'economist')]"));
 //        String js = "return (typeof arguments[0].naturalWidth!=\"undefined\" && arguments[0].naturalWidth>0)";
 //        Boolean isImageDisplayed = (Boolean) ((JavascriptExecutor) driver).executeScript(js, goodImage);
 ////        assertTrue(isImageDisplayed);
 //        return isImageDisplayed;
 //    }
-public boolean isDisplayedsSomePicture(WebElement instabeatPicture) {
-    return instabeatPicture.isDisplayed();
-}
+    public boolean isDisplayedsSomePicture(WebElement instabeatPicture) {
+        return instabeatPicture.isDisplayed();
+    }
 
     public void backspace() {
         driver.navigate().back();
     }
-
 
 
 }

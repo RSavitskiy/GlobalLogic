@@ -1,5 +1,7 @@
 package Pages;
 
+import Pages.HomePage;
+import Pages.Main;
 import org.testng.annotations.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -7,6 +9,7 @@ import static org.junit.Assert.assertTrue;
 
 
 public class TestHomePage extends Main {
+
 
     @Test
     public void testLogo() {
