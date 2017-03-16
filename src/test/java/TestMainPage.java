@@ -1,6 +1,5 @@
-package Pages;
-
-import org.testng.Assert;
+import Pages.Main;
+import Pages.MainPage;
 import org.testng.annotations.Test;
 
 import static com.thoughtworks.selenium.SeleneseTestBase.assertTrue;

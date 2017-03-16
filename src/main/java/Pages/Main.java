@@ -12,9 +12,9 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
 
-    static WebDriver driver;
+    static public WebDriver driver;
 
-    HomePage homePage;
+  public   HomePage homePage;
 //    Header footer;
 
     @BeforeSuite
@@ -26,10 +26,10 @@ public class Main {
 
     }
 
-//    @AfterSuite
-//    public void afterSuite() {
-//        driver.close();
-//    }
+    @AfterSuite
+    public void afterSuite() {
+        driver.close();
+    }
 
 
 

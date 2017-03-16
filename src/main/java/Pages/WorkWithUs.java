@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -94,7 +95,28 @@ public void countVacancies(){
     WebElement  vacancies = driver.findElement(By.xpath(".//*[@class='job-block-title']"));
     List<WebElement>listVacancies=driver.findElements(By.xpath(".//div[@class='job-block-title'][contains(text(),' ')]"));
     System.out.println(listVacancies.size());
+
+    for(int i=0;i<listVacancies.size();i++){
+        System.out.println(listVacancies.get(i).getText());
+    }
 }
 
 
+//    public static class TestWorkWithUs extends Main{
+//
+//
+//
+//    @Test
+//    public void SelectionOfPosition() throws InterruptedException {
+//        WorkWithUs workWithUs=new WorkWithUs(driver);
+//        driver.get("https://www.globallogic.com/ua/work-with-us/");
+//        workWithUs.selectAll();
+//        workWithUs.clickSearch();
+//        Thread.sleep(2000);
+//        workWithUs.countVacancies();
+//    }
+//
+//
+//
+//}
 }

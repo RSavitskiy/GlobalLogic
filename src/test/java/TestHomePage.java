@@ -1,6 +1,3 @@
-package Pages;
-
-import Pages.HomePage;
 import Pages.Main;
 import org.testng.annotations.Test;
 

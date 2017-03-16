@@ -1,10 +1,8 @@
-package Pages;
-
+import Pages.Main;
+import Pages.WorkWithUs;
 import org.testng.annotations.Test;
 
-
-
-public class TestWorkWithUs extends Main{
+public  class TestWorkWithUs extends Main {
 
 
 
@@ -17,7 +15,4 @@ public class TestWorkWithUs extends Main{
         Thread.sleep(2000);
         workWithUs.countVacancies();
     }
-
-
-
 }

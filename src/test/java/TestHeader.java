@@ -1,10 +1,9 @@
-package Pages;
-
+import Pages.Header;
+import Pages.Main;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 public class TestHeader extends Main {
 //    //    Header footer = new Header(driver);
