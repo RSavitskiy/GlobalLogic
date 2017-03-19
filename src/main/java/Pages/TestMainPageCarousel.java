@@ -2,7 +2,7 @@
 //
 //import org.testng.Assert;
 //import org.testng.annotations.DataProvider;
-//import org.testng.annotations.Test;
+//import org.testng.annotations.TestClass;
 //
 //
 //// Class don`t work (not finished)
@@ -10,7 +10,7 @@
 //
 //public class TestMainPageCarousel extends Main {
 //
-//    @Test (dataProvider = "button")
+//    @TestClass (dataProvider = "button")
 //    public void testWorkingButton(String button,String picture) throws InterruptedException {
 //        MainPageCarousel mainPage = new MainPageCarousel(driver);
 //        mainPage.workWithCarousel();

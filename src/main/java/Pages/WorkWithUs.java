@@ -106,7 +106,7 @@ public void countVacancies(){
 //
 //
 //
-//    @Test
+//    @TestClass
 //    public void SelectionOfPosition() throws InterruptedException {
 //        WorkWithUs workWithUs=new WorkWithUs(driver);
 //        driver.get("https://www.globallogic.com/ua/work-with-us/");

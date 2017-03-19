@@ -1,3 +1,5 @@
+package java;
+
 import Pages.Main;
 import Pages.WorkWithUs;
 import org.testng.annotations.Test;

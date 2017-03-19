@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -93,5 +95,10 @@ public class Header {
             }
         }
         return title;
+    }
+
+    public void waiter(String someXpathLocator){
+        WebDriverWait waitForOne=new WebDriverWait(driver,10);
+        waitForOne.until(ExpectedConditions.presenceOfElementLocated(By.xpath(someXpathLocator)));
     }
 }

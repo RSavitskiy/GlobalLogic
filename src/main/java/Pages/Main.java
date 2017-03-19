@@ -21,7 +21,7 @@ public class Main {
     public void beforeSuite() {
         driver = new FirefoxDriver();
         driver.get("https://www.globallogic.com/ua/");
-        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
         homePage = PageFactory.initElements(driver, HomePage.class);
 
     }
