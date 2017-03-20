@@ -1,4 +1,4 @@
-package java;
+
 
 import Pages.Main;
 import Pages.WorkWithUs;
@@ -12,7 +12,7 @@ public  class TestWorkWithUs extends Main {
     public void SelectionOfPosition() throws InterruptedException {
         WorkWithUs workWithUs=new WorkWithUs(driver);
         driver.get("https://www.globallogic.com/ua/work-with-us/");
-        workWithUs.selectAll();
+        workWithUs.selectAll("Ukraine","Kyiv","Testing & Quality Assurance" );
         workWithUs.clickSearch();
         Thread.sleep(2000);
         workWithUs.countVacancies();

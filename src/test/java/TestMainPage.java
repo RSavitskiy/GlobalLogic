@@ -36,7 +36,7 @@ public class TestMainPage extends Main {
         assertEquals(homePage.title.getAttribute("innerHTML"), "Програми для роздрібної торгівлі, мультимедіа, зв'язку, медицини, автопромисловості | GlobalLogic Ukraine");
         mainPage.backspace();
     }
-//????
+
     @Test
     public void testButtonClientGrid() throws InterruptedException {
         mainPage = new MainPage(driver);
@@ -49,7 +49,6 @@ public class TestMainPage extends Main {
     @Test
     public void testLaGalaxyPicture() throws InterruptedException {
         mainPage=new MainPage(driver);
-//        Thread.sleep(3000);
        assertTrue(mainPage.isDisplayedLaGalaxyPicture());
 
     }
@@ -64,28 +63,24 @@ public class TestMainPage extends Main {
     @Test
     public void testResearchPicuare() throws InterruptedException {
         mainPage=new MainPage(driver);
-//        Thread.sleep(3000);
         assertTrue(mainPage.isDisplayedResearchPicuare());
     }
 
     @Test
     public void testEconomistPicture() throws InterruptedException {
         mainPage=new MainPage(driver);
-//        Thread.sleep(3000);
         assertTrue(mainPage.isDisplayedEconomistPicture());
     }
 
     @Test
     public void testInstabeatPicture() throws InterruptedException {
         mainPage=new MainPage(driver);
-//        Thread.sleep(3000);
         assertTrue(mainPage.isDisplayedInstabeatPicture());
     }
 
     @Test
     public void testStellarPicture() throws InterruptedException {
         mainPage=new MainPage(driver);
-//        Thread.sleep(3000);
         assertTrue(mainPage.isDisplayedStellarPicture());
     }
 
@@ -98,21 +93,18 @@ public class TestMainPage extends Main {
     @Test
     public void testCochlearPicture() throws InterruptedException {
         mainPage=new MainPage(driver);
-//        Thread.sleep(3000);
         assertTrue(mainPage.isDisplayedCochlearPicture());
     }
 
     @Test
     public void testSeeMorePicture() throws InterruptedException {
         mainPage=new MainPage(driver);
-//        Thread.sleep(3000);
         assertTrue(mainPage.isDisplayedSeeMorePicture());
     }
 
     @Test
     public void testButtonNewsAndInsightsButton() throws InterruptedException {
         mainPage = new MainPage(driver);
-//        Thread.sleep(3000);
         mainPage.clickButtonNewsAndInsightsButton();
         assertEquals(homePage.title.getAttribute("innerHTML"), "Новини & Insights | GlobalLogic Ukraine");
         mainPage.backspace();
@@ -121,22 +113,10 @@ public class TestMainPage extends Main {
     @Test
     public void testButtonWorkWithUsButton() throws InterruptedException {
         mainPage = new MainPage(driver);
-//        Thread.sleep(3000);
         mainPage.clickButtonWorkWithUsButton();
         assertEquals(homePage.title.getAttribute("innerHTML"), "Топ ІТ-компанії України | GlobalLogic Ukraine");
         mainPage.backspace();
     }
 
-
-//    @TestClass
-//    public void testShareLinkedin() throws InterruptedException {
-//        mainPage =new MainPage(driver);
-//        mainPage.clickLinkedIn();
-//        Thread.sleep(3000);
-//        assertEquals(mainPage.shareLinkedin(),"Войти в LinkedIn");
-//
-//    }
-
-//    Add share linkedin? twitter and facebook
 
 }

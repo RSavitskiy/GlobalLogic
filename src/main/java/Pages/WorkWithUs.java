@@ -56,35 +56,35 @@ public class WorkWithUs {
         search.click();
     }
 
-    public void selectAll() {
+    public void selectAll(String region , String place, String occupation ) {
 
         WebElement country = driver.findElement(By.xpath(".//*[@data-related-select='office']"));
         List<WebElement> listCountry = country.findElements(By.tagName("option"));
-        System.out.println(listCountry.size());
+
 
         for (int i = 0; i < listCountry.size(); i++) {
             String element = listCountry.get(i).getAttribute("value");
-            if (element.equals("Ukraine")) {
+            if (element.equals(region)) {
                 listCountry.get(i).click();
             }
         }
         WebElement city = driver.findElement(By.xpath(".//*[@name='office']"));
         List<WebElement>listCity=city.findElements(By.tagName("option"));
-        System.out.println(listCity.size());
+
 
         for(int i=0;i<listCity.size();i++) {
             String element = listCity.get(i).getAttribute("value");
-            if (element.equals("Kyiv")) {
+            if (element.equals(place)) {
                 listCity.get(i).click();
             }
         }
         WebElement position = driver.findElement(By.xpath(".//*[@name='job_category']"));
         List<WebElement>listPosition=position.findElements(By.tagName("option"));
-        System.out.println(listPosition.size());
+
 
         for(int i=0;i<listPosition.size();i++){
             String element=listPosition.get(i).getAttribute("value");
-            if(element.equals("Testing & Quality Assurance")){
+            if(element.equals(occupation)){
                 listPosition.get(i).click();
             }
         }

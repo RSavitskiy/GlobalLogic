@@ -101,4 +101,6 @@ public class Header {
         WebDriverWait waitForOne=new WebDriverWait(driver,10);
         waitForOne.until(ExpectedConditions.presenceOfElementLocated(By.xpath(someXpathLocator)));
     }
+
+
 }

@@ -67,7 +67,7 @@ public class TestHeader extends Main {
     @Test(priority = 3, dataProvider = "languageTitle")
     public void testGlobalNavigation(String language, String title) throws InterruptedException {
         Header header = new Header(driver);
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Thread.sleep(3000);
         assertEquals(header.forGlobal(language), title);
     }
 
